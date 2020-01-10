@@ -1,0 +1,47 @@
+#about {
+  padding-top: 60px;
+  background: $secondary;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding-top: 0;
+  }
+}
+
+.about-item {
+  padding: 80px 0;
+  color: #fff;
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__description {
+    margin-bottom: 35px;
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 25px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.about-slider {
+
+  .flickity-page-dots {
+    bottom: 60px;
+  }
+
+  &-item {
+    width: 100%;
+    margin: 0 10px;
+
+    &__image {
+      @extend %img;
+      padding-bottom: 737 / 650 * 100%;
+    }
+  }
+}

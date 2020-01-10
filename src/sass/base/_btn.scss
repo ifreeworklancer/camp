@@ -1,0 +1,44 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-family: $headings-font-family;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .875rem;
+  transition: .5s;
+  z-index: 5;
+
+  svg {
+    margin-right: 15px;
+  }
+
+  &-primary {
+    color: #fff;
+
+    svg {
+      fill: #fff;
+    }
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &-outline-primary {
+    svg {
+      fill: $primary;
+      transition: .5s;
+    }
+
+    &:hover {
+      color: #fff;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}

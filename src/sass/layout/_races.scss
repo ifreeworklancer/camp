@@ -1,0 +1,153 @@
+#races {
+  padding: 80px 0;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 120px 0 80px;
+  }
+
+  .section-title {
+    flex: 1 0 auto;
+    margin-bottom: 30px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding-right: 25px;
+      margin-right: 30px;
+      border-right: 1px solid $gray-500;
+      margin-bottom: 0;
+    }
+  }
+
+  .section-description {
+    flex: 1 1 auto;
+  }
+}
+
+.races-slider {
+  margin-top: 30px;
+
+  .flickity-page-dots {
+
+    li {
+      border-color: $gray-600;
+    }
+  }
+
+  &-item {
+    width: 100%;
+    padding: 0 10px;
+    height: 250px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 50%;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      width: 36%;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      width: 27%;
+    }
+
+    @media (min-width: 1400px) {
+      width: 23%;
+    }
+
+    .races-item {
+      height: 92%;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        margin-top: 20px;
+        height: 170px;
+      }
+    }
+
+    &:hover{
+
+      .races-item {
+        margin-top: 0;
+        height: 92%;
+
+        &-header {
+          background: $secondary;
+        }
+
+        &__title {
+          color: #fff;
+        }
+
+        .open-buy {
+          transform: translateY(0);
+          opacity: 1;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}
+
+.races-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: .5s;
+
+  &-header {
+    padding: 20px 30px;
+    background: $secondary;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      background: $gray-200;
+    }
+  }
+
+  &-body {
+    flex: 1 0 auto;
+    padding: 25px 30px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    transition: .5s;
+    color: #fff;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      color: $body-color;
+    }
+  }
+
+  &__list {
+
+    li {
+      position: relative;
+      padding-left: 35px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: url('../images/icons/calendar.svg') 100% 100% /contain no-repeat;
+      }
+    }
+  }
+
+  .open-buy {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    transition: transform .5s, opacity .2s;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+}
+

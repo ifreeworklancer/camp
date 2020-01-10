@@ -1,0 +1,132 @@
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -250%);
+  background: $secondary;
+  width: 95%;
+  max-width: 480px;
+  max-height: 95vh;
+  display: flex;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 500;
+  transition: .5s;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    max-width: 960px;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 60px;
+    background: $darken;
+    z-index: 10;
+    cursor: pointer;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      height: 80px;
+    }
+
+    &:hover {
+
+      .line {
+        background: $primary;
+      }
+    }
+
+    .line {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 3px;
+      background: #fff;
+      transition: .5s;
+
+      &--left {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &--right {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &-prev {
+    @extend %img;
+    width: 50%;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      display: block;
+    }
+  }
+
+  &-body {
+    position: relative;
+    width: 100%;
+    padding: 30px 15px;
+    color: #fff;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: 60px 70px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      width: 50%;
+      max-width: 960px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 75px;
+      height: 80px;
+      top: -10px;
+      left: -10px;
+      background: url('../images/icons/decor-wrapper-top.png') 50% 50% /cover no-repeat;
+      z-index: 5;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 160px;
+        height: 165px;
+      }
+    }
+  }
+
+  &__title {
+    padding-right: 55px;
+    margin-bottom: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding-right: 0;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-mask {
+  @extend %pos;
+  position: fixed;
+  background: rgba(#000, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 490;
+  transition: .5s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

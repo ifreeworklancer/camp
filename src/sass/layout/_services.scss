@@ -1,0 +1,156 @@
+#services {
+  padding: 100px 0 60px;
+  background: $gray-200;
+
+  .custom-tabs {
+
+    &-nav {
+
+      li {
+        position: relative;
+        margin-bottom: 25px;
+        font-family: $headings-font-family;
+        font-weight: bold;
+        font-size: 1.125rem;
+        color: #fff;
+        cursor: pointer;
+        transition: .5s;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          font-size: 1.25rem;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -90px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 16px 0 16px 20px;
+          border-color: transparent transparent transparent #fff;
+          transition: .5s;
+        }
+
+        &:hover,
+        &.active {
+          color: $primary;
+          padding-left: 20px;
+
+          &::before {
+            left: -30px;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+              left: -50px;
+            }
+
+            @media (min-width: map_get($grid-breakpoints, xl)) {
+              left: -70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.services-nav {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 40px 30px 60px;
+  background: $secondary;
+  overflow: hidden;
+  z-index: 10;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 50px 50px 100px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    margin-top: 30px;
+    margin-right: -100px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    padding: 50px 70px 100px;
+  }
+
+  &-decor {
+    @extend %pos;
+    z-index: -2;
+
+    &-item {
+      position: absolute;
+      right: 15px;
+      bottom: 0;
+      transform: translateX(100%);
+      opacity: 0;
+      transition: .5s;
+
+      &.active {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 110px;
+    height: 115px;
+    background: url('../images/icons/decor-wrapper-top.png') 50% 50% /cover no-repeat;
+    z-index: 5;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 130px;
+      height: 135px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      width: 150px;
+      height: 155px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    color: $primary;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -70px;
+      right: -70px;
+      bottom: 0;
+      border-bottom: 1px dashed rgba(#fff, .3);
+    }
+  }
+}
+
+.services-item {
+
+  &__image {
+    @extend %img;
+    margin-bottom: 30px;
+    padding-bottom: 480 / 760 * 100%;
+  }
+
+  &__description {
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding-left: 130px;
+    }
+  }
+}

@@ -1,0 +1,272 @@
+#app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  border-bottom: 1px solid rgba(#fff, .5);
+  transition: .5s;
+
+  &.scroll-top {
+    transform: translateY(-105%);
+  }
+
+  &.is-scroll {
+    background: $secondary;
+  }
+
+  &.menu-open {
+
+    .contacts-list,
+    .social-list {
+      li {
+        a {
+          color: $secondary;
+
+          svg  {
+            fill: $secondary
+          }
+
+          &:hover {
+            color: $primary;
+
+            svg {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .contacts-list {
+      li {
+        a {
+          svg {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .row {
+    position: relative;
+    z-index: 30;
+  }
+
+  .logo {
+    padding-left: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding-left: 30px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding-left: 50px;
+    }
+  }
+
+  .contacts-list,
+  .social-list{
+    margin-right: 40px;
+  }
+
+  .open-help {
+    text-transform: uppercase;
+    font-size: .875rem;
+    margin-right: 40px;
+  }
+}
+
+.logo {
+
+  img {
+    max-width: 140px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      max-width: 180px;
+    }
+  }
+}
+
+.burger-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 70px;
+  background: #fff;
+  cursor: pointer;
+  transition: .5s;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    height: 80px;
+  }
+
+  .line {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: $secondary;
+    margin-right: 4px;
+    transition: .5s;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &.active {
+    background: $secondary;
+
+    .line {
+      background: #fff;
+      width: 15px;
+      height: 3px;
+      border-radius: 0;
+      margin-right: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      &--top {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &--middle {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &--bottom {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &:hover {
+
+      .line {
+        background: $primary;
+      }
+    }
+  }
+
+  &:hover {
+
+    .line {
+      background: $primary;
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  transition: .5s;
+  z-index: 20;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    width: 65%;
+    padding: 50px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    width: 55%;
+    padding: 70px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    width: 45%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 220px;
+    height: 310px;
+    z-index: -2;
+    background: url('../images/icons/menu-decor.png') 50% 50% /cover no-repeat;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  .btn {
+    position: absolute;
+    display: flex;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  &-list {
+
+    li {
+      margin-bottom: 20px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-bottom: 25px;
+      }
+
+      a {
+        position: relative;
+        padding-bottom: 2px;
+        font-size: 1.25rem;
+        color: $body-color;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+          font-size: 1.5rem;
+          padding-bottom: 4px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 3px;
+          background: $primary;
+          transition: .5s;
+        }
+
+        &:hover {
+          color: $primary;
+
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-mask {
+  @extend %pos;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba($secondary, .9);
+  z-index: 15;
+  cursor: pointer;
+  transition: .5s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

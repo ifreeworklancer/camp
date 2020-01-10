@@ -1,0 +1,41 @@
+$primary: #FDCE48;
+$secondary: #2F4D34;
+$dark: #444444;
+$darken: #28432D;
+
+$gray-200: #F5F8EC;
+$gray-300: #F4F7EA;
+$gray-400: #ECF1DE;
+$gray-500: #E2E2E2;
+$gray-600: #999999;
+
+$body-color: $dark;
+$body-bg: #fff;
+
+$font-size-base: 1rem;
+$font-family-base: 'SF UI Text', sans-serif;
+$headings-font-family: 'Montserrat', sans-serif;
+$font-weight-base: 300;
+$headings-font-weight: bold;
+
+$link-color: $primary;
+$link-hover-decoration: none;
+
+$input-btn-border-width: 0;
+$input-btn-focus-width: 0;
+$input-btn-focus-color: rgba(#fff, 0);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-btn-font-family: $font-family-base;
+
+$btn-border-width: 2px;
+$border-radius: 0;
+
+$btn-padding-x: 30px;
+$btn-padding-y: 15px;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 2.25;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base * 1;

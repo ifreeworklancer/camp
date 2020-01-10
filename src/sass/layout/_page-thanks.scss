@@ -1,0 +1,61 @@
+#thanks-page {
+  @extend %img;
+  padding: 140px 0 80px;
+  min-height: 100vh;
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    height: 100vh;
+    max-height: 1080px;
+  }
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: rgba($secondary, .9);
+    z-index: -2;
+  }
+}
+
+.thanks-item {
+  position: relative;
+  max-width: 342px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    padding: 65px 40px;
+    border-radius: 0;
+    background: url('../images/bg/thanks-item-bg.png') 50% 50% /cover no-repeat;
+  }
+
+  &__icon {
+    max-width: 50px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    color: $primary;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 25px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      right: -40px;
+      bottom: 0;
+      height: 2px;
+      background: url('../images/icons/decor-thanks.png') 50% 50% /cover no-repeat;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+#program {
+  @extend %img;
+  background-position: 0 50%;
+  background-color: #fff;
+  padding: 60px 0;
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 100px 0;
+  }
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: url('../images/bg/program-bg-decor.png') 50% 50% /cover no-repeat;
+    z-index: -5;
+  }
+}
+
+.program-item {
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    margin-bottom: 25px;
+
+    p {
+      margin-bottom: 15px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__quote {
+    max-width: 370px;
+    font-weight: 500;
+    color: $secondary;
+    margin-bottom: 30px;
+  }
+}

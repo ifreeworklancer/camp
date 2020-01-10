@@ -1,0 +1,60 @@
+#sale {
+  padding-top: 40px;
+  z-index: 15;
+}
+
+.sale-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+  @extend %img;
+  z-index: 5;
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: linear-gradient(90deg, #2F4D34 36.98%, rgba(47, 77, 52, 0.5) 100%);
+    z-index: -2;
+  }
+
+  .decor {
+    position: absolute;
+    width: 160px;
+    height: 165px;
+    z-index: 5;
+
+    &-top {
+      top: -10px;
+      left: -10px;
+      background: url('../images/icons/decor-wrapper-top.png') 50% 50% /cover no-repeat;
+    }
+
+    &-bottom {
+      right: 0;
+      bottom: 0;
+      background: url('../images/icons/decor-wrapper-bottom-simple.png') 50% 50% /cover no-repeat;
+    }
+  }
+
+  .sale-image {
+    position: absolute;
+    left: 2%;
+    bottom: 0;
+  }
+}
+
+.sale-item {
+  max-width: 460px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin-bottom: 30px;
+  }
+}

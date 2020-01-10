@@ -1,0 +1,28 @@
+#app-footer {
+
+  .footer-nav {
+    padding: 20px 0;
+    background: $secondary;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding: 20px 70px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        margin-right: 40px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer-copyright {
+    background: $darken;
+    padding: 10px 0;
+    text-align: center;
+    font-size: .875rem;
+    color: #fff;
+  }
+}

@@ -1,0 +1,49 @@
+.contacts-list {
+
+  li {
+
+    a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: .875rem;
+
+      &:hover {
+        color: $primary;
+      }
+
+      svg {
+        flex: 1 0 auto;
+        fill: $primary;
+        margin-right: 20px;
+        transition: .5s;
+      }
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+
+  li {
+    margin-right: 25px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    a {
+      svg {
+        fill: #fff;
+        transition: .5s;
+      }
+
+      &:hover {
+
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
