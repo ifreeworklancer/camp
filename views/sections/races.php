@@ -39,4 +39,5 @@
             </div>
         </div>
     </div>
+    <img src="../../images/icons/logo-simple-primary.png" alt="logo" class="decor-logo">
 </section>

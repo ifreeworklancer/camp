@@ -47,3 +47,24 @@
     }
   }
 }
+
+.decor-logo {
+  position: absolute;
+  max-width: 140px;
+  animation: decorLogo 1.5s infinite ease-out;
+  z-index: -2;
+}
+
+@keyframes decorLogo {
+  0% {
+    opacity: .8;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

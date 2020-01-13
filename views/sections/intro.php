@@ -1,5 +1,6 @@
 <!-- Intro -->
 <section id="intro">
+    <div class="video-container" data-src="/video/video.mp4"></div>
     <div class="container h-100">
         <div class="row h-100 d-flex justify-content-center align-items-center">
             <div class="col-sm-10 col-lg-8 col-xl-7">

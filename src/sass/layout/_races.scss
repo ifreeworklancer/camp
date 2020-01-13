@@ -1,6 +1,16 @@
 #races {
   padding: 80px 0;
 
+  .decor-logo {
+    bottom: 10px;
+    right: 5%;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      top: 10%;
+      bottom: auto;
+    }
+  }
+
   @media (min-width: map_get($grid-breakpoints, lg)) {
     padding: 120px 0 80px;
   }

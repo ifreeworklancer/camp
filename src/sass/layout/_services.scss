@@ -2,6 +2,44 @@
   padding: 100px 0 60px;
   background: $gray-200;
 
+  .decor-logo {
+
+    &--first {
+      bottom: 50%;
+      left: 2%;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        bottom: 30px;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        bottom: 50%;
+      }
+    }
+
+    &--second {
+      top: 20px;
+      right: 4%;
+      animation-delay: .4s;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        top: 30%;
+        right: 1%;
+      }
+    }
+
+    &--third {
+      bottom: 20px;
+      right: 8%;
+      animation-delay: .8s;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        bottom: 30%;
+        right: 3%;
+      }
+    }
+  }
+
   .custom-tabs {
 
     &-nav {

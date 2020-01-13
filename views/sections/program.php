@@ -23,4 +23,8 @@
             </div>
         </div>
     </div>
+    <img src="../../images/icons/logo-simple-primary.png" alt="logo" class="decor-logo decor-logo--first">
+    <img src="../../images/icons/logo-simple-primary.png" alt="logo" class="decor-logo decor-logo--second">
+    <img src="../../images/icons/logo-simple-primary.png" alt="logo" class="decor-logo decor-logo--third">
+    <img src="../../images/icons/logo-simple-primary.png" alt="logo" class="decor-logo decor-logo--fourth">
 </section>

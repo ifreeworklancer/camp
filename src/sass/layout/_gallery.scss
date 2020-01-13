@@ -3,6 +3,41 @@
   padding: 300px 0 40px;
   z-index: 5;
 
+  .decor-logo {
+
+    &--first {
+      bottom: 60%;
+      right: 2%;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        bottom: 45%;
+      }
+    }
+
+    &--second {
+      top: 20px;
+      left: 4%;
+      animation-delay: .4s;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        top: 20%;
+        left: 1%;
+      }
+    }
+
+    &--third {
+      bottom: 0px;
+      left: 8%;
+      animation-delay: .8s;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        bottom: 20%;
+        left: 3%;
+      }
+    }
+  }
+
+
   &::before {
     content: '';
     position: absolute;

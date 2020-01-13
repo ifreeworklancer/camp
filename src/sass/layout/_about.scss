@@ -5,6 +5,44 @@
   @media (min-width: map_get($grid-breakpoints, lg)) {
     padding-top: 0;
   }
+
+  .decor-logo {
+
+    &--first {
+      bottom: 50%;
+      right: 2%;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        bottom: 30px;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        bottom: 50%;
+      }
+    }
+
+    &--second {
+      top: 20px;
+      left: 4%;
+      animation-delay: .4s;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        top: 30%;
+        left: 1%;
+      }
+    }
+
+    &--third {
+      bottom: 20px;
+      left: 8%;
+      animation-delay: .8s;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        bottom: 30%;
+        left: 3%;
+      }
+    }
+  }
 }
 
 .about-item {

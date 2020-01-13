@@ -5,6 +5,38 @@
   padding: 60px 0;
   z-index: 5;
 
+  .decor-logo {
+    display: none;
+    max-width: 140px;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      display: block;
+    }
+
+    &--first {
+      top: 30%;
+      left: 20%;
+    }
+
+    &--second {
+      top: 40%;
+      left: 30%;
+      animation-delay: .4s;
+    }
+
+    &--third {
+      top: 50%;
+      left: 15%;
+      animation-delay: .8s;
+    }
+
+    &--fourth {
+      top: 60%;
+      left: 26%;
+      animation-delay: 1.2s;
+    }
+  }
+
   @media (min-width: map_get($grid-breakpoints, sm)) {
     padding: 100px 0;
   }
